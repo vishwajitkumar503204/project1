@@ -1,6 +1,7 @@
 resource "aws_security_group" "demo-sg" {
   name        = "allow-sg"
   description = "ssh access"
+  vpc_id      = aws_vpc.dpp-vpc.id
 
   tags = {
     Name = "ssh-port"
