@@ -10,9 +10,11 @@ environment {
     stages {
         stage("build"){
             steps {
+                dir('tweet-trend') {
                  echo "----------- build started ----------"
                 sh 'mvn clean deploy -Dmaven.test.skip=true'
                  echo "----------- build complted ----------"
+                }
             }
         }
     }
