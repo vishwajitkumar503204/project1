@@ -10,7 +10,9 @@ environment{
     stages {
         stage("build"){
             steps {
+                dir('tweet-trend-new') {
                 sh 'mvn clean deploy' 
+                }
             }
         }
     }
